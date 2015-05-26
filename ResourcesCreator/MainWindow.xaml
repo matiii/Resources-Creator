@@ -1,0 +1,38 @@
+﻿<mui:ModernWindow x:Class="ResourcesCreator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+        Title="Hypermedia Resource Creator" IsTitleVisible="True"
+        LogoData="F1 M 14.25,45.9166L 20.5834,45.9167L 39.1874,23.75L 47.8958,23.75L 41.1667,17.4167L 51.4583,17.4167L 61.75,26.9166L 51.4583,36.4167L 41.1667,36.4167L 47.8958,30.0833L 41.1667,30.0833L 22.1667,52.25L 14.25,52.25L 14.25,45.9166 Z M 14.25,30.0833L 14.25,23.75L 22.1667,23.75L 29.6875,32.5243L 26.1226,36.6834L 20.5833,30.0833L 14.25,30.0833 Z M 41.1667,45.9167L 47.8958,45.9167L 41.1666,39.5833L 51.4583,39.5834L 61.75,49.0834L 51.4583,58.5833L 41.1666,58.5833L 47.8958,52.25L 39.1873,52.25L 31.9416,43.6167L 35.5684,39.3854L 41.1667,45.9167 Z "          
+        ContentSource="/Pages/Home.xaml" Closing="ModernWindow_Closing">
+
+    <mui:ModernWindow.MenuLinkGroups>
+        <mui:LinkGroup DisplayName="MAIN">
+            <mui:LinkGroup.Links>
+                <mui:Link DisplayName="home" Source="/Pages/Home.xaml" />
+            </mui:LinkGroup.Links>
+        </mui:LinkGroup>
+        <mui:LinkGroup DisplayName="settings" GroupKey="settings">
+            <mui:LinkGroup.Links>
+                <mui:Link DisplayName="setting connection" Source="/Pages/SettingsPage.xaml" />
+            </mui:LinkGroup.Links>
+        </mui:LinkGroup>
+        <mui:LinkGroup DisplayName="logs" GroupKey="logs">
+            <mui:LinkGroup.Links>
+                <mui:Link DisplayName="logs from resources" Source="/Pages/Settings/Log.xaml" />
+            </mui:LinkGroup.Links>
+        </mui:LinkGroup>
+        <mui:LinkGroup DisplayName="about" GroupKey="about">
+            <mui:LinkGroup.Links>
+                <mui:Link DisplayName="about application" Source="/Pages/About.xaml" />
+            </mui:LinkGroup.Links>
+        </mui:LinkGroup>
+    </mui:ModernWindow.MenuLinkGroups>
+    
+    <mui:ModernWindow.TitleLinks>
+        <mui:Link DisplayName="home" Source="/Pages/Home.xaml" />
+        <mui:Link DisplayName="settings" Source="/Pages/SettingsPage.xaml" />
+        <mui:Link DisplayName="logs" Source="/Pages/Settings/Log.xaml" />
+        <mui:Link DisplayName="about" Source="/Pages/About.xaml" />
+    </mui:ModernWindow.TitleLinks>
+</mui:ModernWindow>

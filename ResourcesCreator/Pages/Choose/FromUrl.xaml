@@ -1,0 +1,50 @@
+﻿<UserControl x:Class="ResourcesCreator.Pages.Choose.FromUrl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="500">
+    <Grid Style="{StaticResource ContentRoot}">
+        <ScrollViewer>
+            <StackPanel MinWidth="450">
+                <TextBlock Text="Enter excel Id from google drive" Style="{StaticResource Heading2}" />
+                <Grid Margin="0,25,0,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50px" />
+                        <RowDefinition Height="50px" />
+                        <RowDefinition Height="50px" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="50px" />
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="75px" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="100px" />
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Margin="10,0,0,5" HorizontalAlignment="Left" VerticalAlignment="Bottom" Text="Id " Grid.Row="0" Grid.Column="1" />
+
+
+                    <TextBox Text="{Binding Url}"  Margin="5,0,0,0" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Height="25px"/>
+
+                    <StackPanel Height="150px" Grid.Row="3" Grid.ColumnSpan="3">
+                        <Button IsEnabled="{Binding ButtonIsEnabled}" Margin="230,35,15,15" HorizontalAlignment="Right" Height="50px" Width="200px" Tag="1" Click="Button_Click">
+                            <StackPanel Width="200px" HorizontalAlignment="Center" Orientation="Horizontal">
+                                <TextBlock VerticalAlignment="Center" Padding="70,0,0,0" Width="130px" HorizontalAlignment="Center" Text="Generate" />
+                                <mui:ModernProgressRing Padding="5,5,30,5" Width="70px" IsActive="{Binding RingIsActive}"/>
+                            </StackPanel>
+                        </Button>
+
+                    </StackPanel>
+                    <TextBlock Grid.Row="4" Grid.Column="1" Text="{Binding Log}" FontSize="10" Foreground="#FFCBC9C9" />
+                </Grid>
+
+
+
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</UserControl>
